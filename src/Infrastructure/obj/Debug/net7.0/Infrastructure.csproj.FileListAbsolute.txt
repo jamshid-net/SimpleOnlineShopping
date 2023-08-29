@@ -1,0 +1,17 @@
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Application.dll
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Domain.dll
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Application.pdb
+D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Domain.pdb
+D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete

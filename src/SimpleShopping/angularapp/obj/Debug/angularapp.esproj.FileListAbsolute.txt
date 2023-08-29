@@ -1,0 +1,2 @@
+D:\SimpleShopping\src\SimpleShopping\angularapp\obj\Debug\angularapp.esproj.SuggestedBindingRedirects.cache
+D:\SimpleShopping\src\SimpleShopping\angularapp\obj\Debug\angularapp.esproj.CoreCompileInputs.cache
