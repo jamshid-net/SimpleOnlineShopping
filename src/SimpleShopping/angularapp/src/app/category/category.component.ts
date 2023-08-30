@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryApiService } from '../ApiServices/category-api.service';
 import { Category } from '../Models/CategoryResponse';
+import { HttpServiceService } from '../ApiServices/http-service.service';
 
 @Component({
   selector: 'app-category',
@@ -8,16 +8,18 @@ import { Category } from '../Models/CategoryResponse';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  constructor(private categoryService:CategoryApiService){}
+  constructor(private categoryService:HttpServiceService){}
   public categories?:Category[];
- 
+  baseUrl:string = "api/Category"
   ngOnInit(): void {
-    console.log("hello");
-    
-    this.categoryService.getAllCategory().subscribe(res=>{
+    this.categoryService.GetAll<Category>(this.baseUrl+"GetAll").subscribe(res=>{
         this.categories = res;
     },error=> console.error(error));
   }
+  Delete(id:number){
+      
+  }
+
 
 
 }

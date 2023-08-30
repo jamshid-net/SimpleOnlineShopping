@@ -1,4 +1,4 @@
-﻿using Application.UseCases.Categories.Commands.Create;
+﻿using Application.UseCases.Categories.Commands;
 using Application.UseCases.Categories.Queries;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,18 +9,17 @@ namespace webapi.Controllers;
 public class CategoryController : BaseController
 {
     [HttpPost("[action]")]
-    public async Task<IActionResult> CreateCategory(string categoryName)
+    public async Task<IActionResult> Create(string categoryName)
     {
-       var created= await _mediator.Send(new CreateCategoryCommand { CategoryName = categoryName });
-        return Ok(created);    
+        var createdId= await _mediator.Send(new CreateCategoryCommand { CategoryName = categoryName });
+        return Ok(createdId);    
     }
 
     [HttpGet("[action]")]
-    public async Task<IActionResult> GetAllCategory()
+    public async Task<IActionResult> GetAll()
     {
         var categories = await _mediator.Send(new GetAllCategoryQuery());
         return Ok(categories);
     }
-
 
 }
