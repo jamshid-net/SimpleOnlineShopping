@@ -1,4 +1,5 @@
 ﻿using Application.UseCases.Users.Commands;
+using Application.UseCases.Users.Response;
 using AutoMapper;
 using Domain.Entities;
 using System;
@@ -13,5 +14,6 @@ public class UserMapping:Profile
     public UserMapping()
     {
         CreateMap<User, RegisterUserCommand>().ReverseMap();
+        CreateMap<User, UserResponse>().ReverseMap();
     }
 }

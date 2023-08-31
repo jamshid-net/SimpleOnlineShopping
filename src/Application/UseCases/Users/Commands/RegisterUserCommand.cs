@@ -3,6 +3,7 @@
 using Application.Common.Interfaces;
 using Application.Common.JWT;
 using AutoMapper;
+using Domain.Entities;
 using MediatR;
 
 namespace Application.UseCases.Users.Commands;
@@ -20,15 +21,26 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, T
 {
     private readonly IApplicationDbContext _context;
     private readonly IMapper _mapper;
-
-    public RegisterUserCommandHandler(IApplicationDbContext context, IMapper mapper)
+    private readonly IJwtToken _jwtToken;
+    public RegisterUserCommandHandler(IApplicationDbContext context, IMapper mapper, IJwtToken jwtToken)
     {
         _context = context;
         _mapper = mapper;
+        _jwtToken = jwtToken;
     }
 
-    Task<TokenResponse> IRequestHandler<RegisterUserCommand, TokenResponse>.Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+    public async Task<TokenResponse> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var newUser = _mapper.Map<User>(request);
+        newUser.Roles = new string[] { "user" };
+        await _context.Users.AddAsync(newUser, cancellationToken);
+        if( await _context.SaveChangesAsync(cancellationToken)>0)
+        {
+            return await _jwtToken.GenerateTokenAsync(newUser.Id, newUser.Email, newUser.Roles);
+        }
+        else
+        {
+            return new TokenResponse { AccessToken = "No token" };
+        }
     }
 }

@@ -24,10 +24,10 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand, TokenRe
     public async Task<TokenResponse> Handle(LoginUserCommand request, CancellationToken cancellationToken)
     {
         var user = await _jwtToken.AuthenAsync(request);
-        string[] fake = new string[] { "heh", "he" };
+        
         if (user != null || !string.IsNullOrEmpty(user.Email))
         {
-            return await _jwtToken.GenerateTokenAsync(user.Id, user.Email, fake);
+            return await _jwtToken.GenerateTokenAsync(user.Id, user.Email, user.Roles);
 
         }
         else
