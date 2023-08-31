@@ -63,3 +63,13 @@ D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Application.dll
 D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Infrastructure.dll
 D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Application.pdb
 D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Infrastructure.pdb
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

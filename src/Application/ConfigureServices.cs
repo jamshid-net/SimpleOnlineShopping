@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Application.Common.JWT;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ public static class ConfigureServices
         {
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
         });
-
+        services.AddScoped<IJwtToken, JwtToken>();
         return services;
     }
 }

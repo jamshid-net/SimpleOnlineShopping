@@ -16,6 +16,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         entity.ToTable("users");
 
+        
         entity.Property(e => e.Id).HasColumnName("id");
         entity.Property(e => e.BirthDate).HasColumnName("birth_date");
         entity.Property(e => e.Email).HasColumnName("email");
@@ -26,5 +27,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasColumnName("phone");
         entity.Property(e => e.ShortAddress).HasColumnName("short_address");
         entity.Property(e => e.UserPicture).HasColumnName("user_picture");
+        entity.Property(e => e.Roles).HasColumnName("roles");
     }
 }

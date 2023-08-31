@@ -21,5 +21,6 @@ public partial class User
 
     public string? UserPicture { get; set; }
 
+    public string[]? Roles { get; set; }
     public virtual ICollection<Order> Orders { get; } = new List<Order>();
 }
