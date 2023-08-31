@@ -21,5 +21,25 @@ public class CategoryController : BaseController
         var categories = await _mediator.Send(new GetAllCategoryQuery());
         return Ok(categories);
     }
+    [HttpGet("[action]")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var category = await _mediator.Send(new GetCategoryByIdQuery { Id = id });
+        return Ok(category);    
+    }
 
+
+    [HttpPut("[action]")]
+    public async Task<IActionResult> Update(UpdateCategoryCommand command)
+    {
+        await _mediator.Send(command);
+        return NoContent();
+    }
+
+    [HttpDelete("[action]")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _mediator.Send(new DeleteCategoryCommand { Id = id });
+        return NoContent();
+    }
 }
