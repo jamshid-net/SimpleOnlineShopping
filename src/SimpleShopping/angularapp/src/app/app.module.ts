@@ -5,21 +5,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { AppRoutingModule } from './app-routing.module';
-import { UserComponent } from './user/user.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryComponent,
-    UserComponent,
     UserLoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRoutingModule
+    BrowserModule, HttpClientModule, AppRoutingModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

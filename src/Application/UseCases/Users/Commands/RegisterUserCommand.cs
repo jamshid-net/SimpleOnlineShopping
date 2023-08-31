@@ -1,5 +1,6 @@
 ﻿
 
+using Application.Common.HelperExtentions;
 using Application.Common.Interfaces;
 using Application.Common.JWT;
 using AutoMapper;
@@ -10,12 +11,11 @@ namespace Application.UseCases.Users.Commands;
 public class RegisterUserCommand:IRequest<TokenResponse>
 {
     public string FullName { get; set; } 
-    public DateOnly? BirthDate { get; set; }
     public string Phone { get; set; } 
     public string Password { get; set; }
     public string Email { get; set; }
     public string? ShortAddress { get; set; }
-    public string? UserPicture { get; set; }
+    
 }
 public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, TokenResponse>
 {
@@ -31,8 +31,10 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, T
 
     public async Task<TokenResponse> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
+        string hashedPassowrd = request.Password.GetHashedString();
         var newUser = _mapper.Map<User>(request);
         newUser.Roles = new string[] { "user" };
+        newUser.Password = hashedPassowrd;
         await _context.Users.AddAsync(newUser, cancellationToken);
         if( await _context.SaveChangesAsync(cancellationToken)>0)
         {
