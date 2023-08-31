@@ -10,7 +10,7 @@ import { HttpServiceService } from '../ApiServices/http-service.service';
 export class CategoryComponent implements OnInit {
   constructor(private categoryService:HttpServiceService){}
   public categories?:Category[];
-  baseUrl:string = "api/Category"
+  baseUrl:string = "api/Category/"
   ngOnInit(): void {
     this.categoryService.GetAll<Category>(this.baseUrl+"GetAll").subscribe(res=>{
         this.categories = res;
@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
   Delete(id:number){
       
   }
-
+  
 
 
 }

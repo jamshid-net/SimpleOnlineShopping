@@ -1,0 +1,5 @@
+.customActive{
+    color:rgb(255, 255, 255) !important;
+    transition: 0.5s;
+    text-shadow: rgb(217, 233, 248) 1px 0 15px;
+}
