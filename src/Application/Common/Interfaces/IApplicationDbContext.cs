@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 namespace Application.Common.Interfaces;
 public interface IApplicationDbContext
 {
-     DbSet<Category> Categories { get; }
+    DbSet<Category> Categories { get; }
 
-     DbSet<Order> Orders { get; }
+    DbSet<Order> Orders { get; }
 
-     DbSet<Product> Products { get; set; }
+    DbSet<Product> Products { get; }
 
-     DbSet<ProductsOrder> ProductsOrders { get; }
 
-     DbSet<User> Users { get; }
-     Task<int> SaveChangesAsync(CancellationToken cancellationToken=default);
+    DbSet<User> Users { get; }
+
+    DbSet<Role> Roles { get; }
+
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }

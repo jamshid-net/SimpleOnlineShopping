@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { map } from 'rxjs/operators'
 import { FormGroup,FormControl,Validators, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms';
-
+import { ErrorResponseRoot } from '../error.response';
 
 @Component({
   selector: 'app-user-register',
@@ -10,6 +11,7 @@ import { FormGroup,FormControl,Validators, ValidatorFn, ValidationErrors, Abstra
 })
 export class UserRegisterComponent {
   errormessage?:string;
+  clientError?:string;
   constructor(private http:HttpClient){}
   registerForm = new FormGroup({
     fullName:new FormControl('',[Validators.required]),
@@ -29,15 +31,20 @@ export class UserRegisterComponent {
         password:this.registerForm.value.password,
         shortAddress:this.registerForm.value.shortAddress,
       }
-      this.http.post<TokenResponse>("api/User/Register",newUser).subscribe(response=>{
-        localStorage.setItem("token",response.accessToken);
-        this.registerForm.reset();
-      },error=>{
-        this.errormessage = error;
-        console.log(this.errormessage);
-        
+      this.http.post<TokenResponse|ErrorResponseRoot>("api/User/Register",newUser).subscribe(response=>{
+        if(response && 'accessToken' in response){
+          console.log(response.accessToken);
+          
+        }
+        if(response && 'Error' in response){
+          console.log(response.Error);
+          this.clientError = response.Error;
+          setTimeout(() => {
+            this.clientError='';
+          }, 4000);
+          
+        }
       });
-
 
     }
 

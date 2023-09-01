@@ -12,14 +12,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> entity)
     {
-        entity.HasKey(e => e.Id).HasName("users_pkey");
-
+       
         entity.ToTable("users");
 
-        
         entity.Property(e => e.Id).HasColumnName("id");
         entity.Property(e => e.BirthDate).HasColumnName("birth_date");
         entity.Property(e => e.Email).HasColumnName("email");
+        entity.HasIndex(e => e.Email).IsUnique();
         entity.Property(e => e.FullName).HasColumnName("full_name");
         entity.Property(e => e.Password).HasColumnName("password");
         entity.Property(e => e.Phone)
@@ -27,6 +26,8 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasColumnName("phone");
         entity.Property(e => e.ShortAddress).HasColumnName("short_address");
         entity.Property(e => e.UserPicture).HasColumnName("user_picture");
-        entity.Property(e => e.Roles).HasColumnName("roles");
+       
+     
+
     }
 }

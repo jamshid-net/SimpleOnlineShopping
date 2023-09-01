@@ -73,3 +73,4 @@ D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityM
 D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\SimpleShopping\src\SimpleShopping\webapi\bin\Debug\net7.0\Newtonsoft.Json.dll

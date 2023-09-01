@@ -12,12 +12,10 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 {
     public void Configure(EntityTypeBuilder<Category> entity)
     {
-        entity.HasKey(e => e.Id).HasName("category_pkey");
-
+       
         entity.ToTable("categories");
 
         entity.Property(e => e.Id)
-            .HasDefaultValueSql("nextval('category_id_seq'::regclass)")
             .HasColumnName("id");
         entity.Property(e => e.CategoryName)
             .HasMaxLength(20)

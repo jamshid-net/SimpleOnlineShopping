@@ -12,12 +12,9 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 {
     public void Configure(EntityTypeBuilder<Product> entity)
     {
-        entity.HasKey(e => e.Id).HasName("product_pkey");
-
         entity.ToTable("products");
 
         entity.Property(e => e.Id)
-            .HasDefaultValueSql("nextval('product_id_seq'::regclass)")
             .HasColumnName("id");
         entity.Property(e => e.CategoryId).HasColumnName("category_id");
         entity.Property(e => e.ProductName)
@@ -26,8 +23,6 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         entity.Property(e => e.ProductPicture).HasColumnName("product_picture");
         entity.Property(e => e.ProductPrice).HasColumnName("product_price");
 
-        entity.HasOne(d => d.Category).WithMany(p => p.Products)
-            .HasForeignKey(d => d.CategoryId)
-            .HasConstraintName("product_category_id_fkey");
+      
     }
 }

@@ -15,5 +15,3 @@ D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Domain.dll
 D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Application.pdb
 D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Domain.pdb
 D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
-D:\SimpleShopping\src\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
-D:\SimpleShopping\src\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache

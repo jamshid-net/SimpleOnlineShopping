@@ -1,6 +1,4 @@
-﻿
-
-using Application.Common.HelperExtentions;
+﻿using Application.Common.HelperExtentions;
 using Application.Common.Interfaces;
 using Application.Common.JWT;
 using AutoMapper;
@@ -31,14 +29,18 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, T
 
     public async Task<TokenResponse> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
+        var isExistsEmail = _context.Users.Any(x => x.Email == request.Email);
+        if (isExistsEmail) 
+            throw new AlreadyExistsException("User",request.Email);
+
         string hashedPassowrd = request.Password.GetHashedString();
         var newUser = _mapper.Map<User>(request);
-        newUser.Roles = new string[] { "user" };
+        
         newUser.Password = hashedPassowrd;
         await _context.Users.AddAsync(newUser, cancellationToken);
         if( await _context.SaveChangesAsync(cancellationToken)>0)
         {
-            return await _jwtToken.GenerateTokenAsync(newUser.Id, newUser.Email, newUser.Roles);
+            return await _jwtToken.GenerateTokenAsync(newUser.Id, newUser.Email,newUser.Roles);
         }
         else
         {

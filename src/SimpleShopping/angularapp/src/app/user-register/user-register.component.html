@@ -8,7 +8,9 @@
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
             
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-                 <h2 style="color:red;" *ngIf="errormessage">Something went wrong please try again!</h2>
+                  <h4 *ngIf="clientError !=''" style="color: rgb(133, 3, 3);">
+                      {{clientError}}
+                  </h4>
                   <form class="mx-1 mx-md-4" [formGroup]="registerForm" (ngSubmit)="Register()">
   
                     <div class="d-flex flex-row align-items-center mb-4">

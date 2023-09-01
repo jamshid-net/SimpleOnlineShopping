@@ -12,8 +12,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> entity)
     {
-        entity.HasKey(e => e.Id).HasName("orders_pkey");
-
+        
         entity.ToTable("orders");
 
         entity.Property(e => e.Id).HasColumnName("id");
@@ -22,8 +21,6 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             .HasColumnName("order_date");
         entity.Property(e => e.UserId).HasColumnName("user_id");
 
-        entity.HasOne(d => d.User).WithMany(p => p.Orders)
-            .HasForeignKey(d => d.UserId)
-            .HasConstraintName("orders_user_id_fkey");
+       
     }
 }

@@ -38,7 +38,7 @@ public class JwtToken : IJwtToken
        
     }
 
-    public async Task<TokenResponse> GenerateTokenAsync(int userId, string email, string[] roles)
+    public async Task<TokenResponse> GenerateTokenAsync(int userId, string email, List<Role> roles)
     {
         var claims = new List<Claim>()
         {
@@ -47,11 +47,11 @@ public class JwtToken : IJwtToken
 
         };
 
-        if (roles.Length > 0)
+        if (roles.Count > 0)
         {
             foreach (var role in roles)
             {
-                claims.Add(new Claim("Roles", role));
+                claims.Add(new Claim("Roles", role.RoleName));
             }
         }
         var jwt = new JwtSecurityToken(

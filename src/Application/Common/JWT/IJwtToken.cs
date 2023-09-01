@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Application.Common.JWT;
 public interface IJwtToken
 {
-    Task<TokenResponse> GenerateTokenAsync(int userId, string email, string[] roles);
+    Task<TokenResponse> GenerateTokenAsync(int userId, string email, List<Role> roles);
     Task<User> AuthenAsync(LoginUserCommand user);
 
 

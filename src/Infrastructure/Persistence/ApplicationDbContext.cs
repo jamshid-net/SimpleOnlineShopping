@@ -22,10 +22,8 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
-    public virtual DbSet<ProductsOrder> ProductsOrders { get; set; }
-
     public virtual DbSet<User> Users { get; set; }
-
+    public virtual DbSet<Role> Roles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Domain.Entities;
 
 public partial class Product
 {
+    [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
     public string ProductName { get; set; } = null!;
@@ -16,4 +20,7 @@ public partial class Product
     public int? CategoryId { get; set; }
 
     public virtual Category? Category { get; set; }
+
+    [JsonIgnore]
+    public virtual List<Order>? Orders { get; set; }
 }

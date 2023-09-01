@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities;
 
 public partial class User
 {
+    [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
     public string FullName { get; set; } = null!;
@@ -20,7 +23,6 @@ public partial class User
     public string? ShortAddress { get; set; }
 
     public string? UserPicture { get; set; }
-
-    public string[]? Roles { get; set; }
+    public virtual List<Role>? Roles { get; set; } = new List<Role>();
     public virtual ICollection<Order> Orders { get; } = new List<Order>();
 }
