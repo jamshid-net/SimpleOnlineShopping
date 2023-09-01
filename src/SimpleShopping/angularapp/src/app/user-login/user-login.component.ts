@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { TokenResponse } from '../user-register/user-register.component';
+import { ErrorResponseRoot } from '../error.response';
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  errormessage?:string;
+  clientError?:string;
+  
   constructor(private http:HttpClient) {}
   loginForm = new FormGroup({
     password:new FormControl('',[Validators.required,Validators.minLength(6)]),
@@ -24,13 +26,20 @@ export class UserLoginComponent {
         password:this.loginForm.value.password,
         
       }
-      this.http.post<TokenResponse>("api/User/Login",LoginUser).subscribe(response=>{
+      this.http.post<TokenResponse|ErrorResponseRoot>("api/User/Login",LoginUser).subscribe(response=>{
+        if(response && 'accessToken' in response){
         localStorage.setItem("token",response.accessToken);
         this.loginForm.reset();
-      },error=>{
-        this.errormessage = error;
-        console.log(this.errormessage);
-        
+          
+        }
+        if(response && 'Error' in response){
+          console.log(response.Error);
+          this.clientError = response.Error;
+          setTimeout(() => {
+            this.clientError='';
+          }, 4000);
+          
+        }
       });
 
 

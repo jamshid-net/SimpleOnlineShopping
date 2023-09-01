@@ -33,7 +33,8 @@ export class UserRegisterComponent {
       }
       this.http.post<TokenResponse|ErrorResponseRoot>("api/User/Register",newUser).subscribe(response=>{
         if(response && 'accessToken' in response){
-          console.log(response.accessToken);
+        localStorage.setItem("token",response.accessToken);
+        this.registerForm.reset();
           
         }
         if(response && 'Error' in response){

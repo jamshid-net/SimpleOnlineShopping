@@ -9,6 +9,12 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { MainComponent } from './admin/main/main.component';
+import { ProductsComponent } from './products/products.component';
+import { UsersComponent } from './users/users.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
@@ -17,7 +23,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CategoryComponent,
     UserLoginComponent,
     UserRegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent,
+    AdminComponent,
+    MainComponent,
+    ProductsComponent,
+    UsersComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule,FormsModule,ReactiveFormsModule

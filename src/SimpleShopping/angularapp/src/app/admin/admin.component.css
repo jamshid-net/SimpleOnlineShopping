@@ -1,0 +1,11 @@
+.adminpage{
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.customeActive{
+    color: rgb(212, 3, 3) !important;
+    transition: 0.5s;
+    text-shadow: 0px 0px 27px rgba(145, 5, 5, 0.9);
+}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +22,6 @@ public class UserResponse
 
     public string? UserPicture { get; set; }
 
-    public string[]? Roles { get; set; }
+    public List<Role>? Roles { get; set; }
+    
 }

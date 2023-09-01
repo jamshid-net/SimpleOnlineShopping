@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" style="background-color: #10012c;">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <h1>Admin</h1>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a routerLink="/admin" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="customeActive"  class="nav-link link-light">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Main</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="categories" routerLinkActive="customeActive" class="nav-link link-light" >
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Categories</span></a>
+                    </li>
+                    <li>
+                        <a routerLink="products" routerLinkActive="customeActive" class="nav-link link-light">
+                            <i class="fs-4 bi-box-seam"></i> <span class="ms-1 d-none d-sm-inline">Products</span></a>
+                    </li>
+                    <li>
+                        <a routerLink="orders" routerLinkActive="customeActive" class="nav-link link-light">
+                            <i class="fs-4 bi-cart4"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                    </li>
+                    <li>
+                        <a routerLink="users" routerLinkActive="customeActive" class="nav-link link-light">
+                       <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Users</span> </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="col py-3">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

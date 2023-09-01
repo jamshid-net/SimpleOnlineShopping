@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  userIsAuthorized():boolean{
+    let token = localStorage.getItem("token");
+    if(token?.startsWith("ey")){
+      return true;
+    }
+    else return false;
+  }
+
 }
