@@ -1,6 +1,6 @@
-<div class="customvh75">
+<div class="customvh75" >
     <table class="table table-dark table-striped table-hover"> 
-        <thead>
+        <thead >
             <tr style="background-color: red;">
             <th>Manage products</th>
             <td colspan="2"></td>
@@ -15,49 +15,27 @@
               <th scope="col">Action</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider" style="border-top-color: red">
+          <tbody *ngFor="let product of productsPaginated.results" class="table-group-divider" style="border-top-color: red">
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td><button class="btn btn-primary me-2"><span><i class="bi bi-pencil"></i></span> Edit</button>
-              <button class="btn btn-danger"><span><i class="bi bi-trash"></i></span> Delete</button></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td><button class="btn btn-primary me-2"><span><i class="bi bi-pencil"></i></span> Edit</button>
-                <button (click)="openDialog()" class="btn btn-danger"><span><i class="bi bi-trash"></i></span> Delete</button></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td><button class="btn btn-primary me-2"><span><i class="bi bi-pencil"></i></span> Edit</button>
-                <button class="btn btn-danger"><span><i class="bi bi-trash"></i></span> Delete</button></td>
+              <th scope="row">{{product.id}}</th>
+              <td>{{product.productName}}</td>
+              <td>{{product.productPrice}}</td>
+              <td>{{product.category.categoryName}}</td>
+              <td>
+                <button class="btn btn-primary me-2"><span><i class="bi bi-pencil"></i></span> Edit</button>
+                <button (click)="openDialog()" class="btn btn-danger"><span><i class="bi bi-trash"></i></span> Delete</button>
+              </td>
             </tr>
           </tbody>
       </table>
-      <div class="paginatedFixed">
-        <nav  aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item active"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
-    </div>
+      <app-paginator
+  [totalPagesArray]="totalPagesArray"
+  [totalPages]="productsPaginated.totalPages"
+  [currentPage]="productsPaginated.currentPage"
+  (pageChanged)="GetPaginatedProducts($event)"
+></app-paginator>
 </div>
+
 
 
 

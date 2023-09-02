@@ -22,6 +22,8 @@ import { CreateDialogComponent } from './products/create-dialog/create-dialog.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { PaginatorComponent } from './paginator/paginator.component';
+
 
 @NgModule({
   declarations: [
@@ -39,11 +41,12 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     DeleteDialogComponent,
     EditDialogComponent,
-    CreateDialogComponent
+    CreateDialogComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule,FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

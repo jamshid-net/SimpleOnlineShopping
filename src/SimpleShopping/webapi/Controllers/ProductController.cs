@@ -1,6 +1,8 @@
 ﻿using Application.Common.Interfaces;
 using Application.UseCases.Products.Commands;
 using Application.UseCases.Products.Queries;
+using Bogus;
+using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -49,6 +51,23 @@ public class ProductController : BaseController
     }
 
 
+    [HttpGet("generate")]
+    public async Task<IActionResult> Generate()
+    {
+        Faker faker = new Faker();
+        for (int i = 0; i < 50; i++)
+        {
+            Product product = new();
+            product.CategoryId = 1;
+            product.ProductName = faker.Commerce.ProductName();
+            product.ProductPicture = faker.Image.LoremFlickrUrl();
+            product.ProductPrice = float.Parse(faker.Commerce.Price());
+            await _context.Products.AddAsync(product);
+            await _context.SaveChangesAsync();
+
+        }
+        return Ok(true);
+    }
     
 
 }

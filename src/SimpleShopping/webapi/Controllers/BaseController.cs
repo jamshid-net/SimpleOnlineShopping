@@ -8,5 +8,5 @@ namespace webapi.Controllers;
 public class BaseController : ControllerBase
 {
     protected IMediator _mediator => HttpContext.RequestServices.GetRequiredService<IMediator>();
-    //protected IApplicationDbContext _context => HttpContext.RequestServices.GetRequiredService<IApplicationDbContext>();
+    protected IApplicationDbContext _context => HttpContext.RequestServices.GetRequiredService<IApplicationDbContext>();
 }

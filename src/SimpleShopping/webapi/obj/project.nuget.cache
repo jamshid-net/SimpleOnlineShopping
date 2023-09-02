@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6SZ7shWsQWvX43UXJyojLyVATah9AbY6MBpVszxeU4Zrqi1Goeturk9hdbH36TyPBTHCDIntC2v2JIU+IPVvlg==",
+  "dgSpecHash": "pcYnijC29XvwQ/aWonZcaCu37Qajz7P9nGUVEGNA275buteiNoXXz9XwDsPIVz/vrdtl7nttqZLsh6zAi+6xmg==",
   "success": true,
   "projectFilePath": "D:\\SimpleShopping\\src\\SimpleShopping\\webapi\\webapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

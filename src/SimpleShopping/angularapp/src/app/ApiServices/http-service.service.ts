@@ -31,6 +31,9 @@ export class HttpServiceService {
     return this.http.delete<T>(url);
   }
 
+  GetPaginated<T>(url:string):Observable<T>{
+    return this.http.get<T>(url);
+  }
 
 
 }
