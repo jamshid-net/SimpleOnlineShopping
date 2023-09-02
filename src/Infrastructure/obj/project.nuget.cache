@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P+QPkqIVnCndEFxEUnr6OjnQwmtgQcLIWAvpKun3YXB0ifRKgwvkC8oAYmPFHKJr8tytVOtRYSbUNPy22Y88zg==",
+  "dgSpecHash": "CRoiVvUroONk4YH5qjmYSO/g0f3Ujwa71huMB3xgAbyr+JeKhe3Yvb9hqmx2ekbyMYHLnLdg+AxbxQBelRtGlQ==",
   "success": true,
   "projectFilePath": "D:\\SimpleShopping\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.0.0-preview4\\microsoft.identitymodel.tokens.7.0.0-preview4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\npgsql\\8.0.0-preview.1\\npgsql.8.0.0-preview.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.0-preview.1\\npgsql.entityframeworkcore.postgresql.8.0.0-preview.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\pagination.entityframeworkcore.extensions\\2.4.3\\pagination.entityframeworkcore.extensions.2.4.3.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.0.0-preview4\\system.identitymodel.tokens.jwt.7.0.0-preview4.nupkg.sha512"
   ],
   "logs": []

@@ -84,6 +84,10 @@
               "target": "Package",
               "version": "[8.0.0-preview.1, )"
             },
+            "Pagination.EntityFrameworkCore.Extensions": {
+              "target": "Package",
+              "version": "[2.4.3, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[7.0.0-preview4, )"

@@ -17,6 +17,7 @@
           "Microsoft.Extensions.Configuration": "8.0.0-preview.1.23110.8",
           "Microsoft.Extensions.Configuration.Binder": "8.0.0-preview.1.23110.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0-preview.1",
+          "Pagination.EntityFrameworkCore.Extensions": "2.4.3",
           "System.IdentityModel.Tokens.Jwt": "7.0.0-preview4"
         },
         "runtime": {
@@ -375,6 +376,17 @@
           }
         }
       },
+      "Pagination.EntityFrameworkCore.Extensions/2.4.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0-preview.1.23111.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll": {
+            "assemblyVersion": "2.4.3.0",
+            "fileVersion": "2.4.3.0"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -672,6 +684,13 @@
       "sha512": "sha512-B+ltuRYwU7xNJEf7J8WQJN9+cQdUxi6XaHOVnwmswxvWQE/epw3SN9l4ZXOlQvJor7cGoD7Bn+I9wqlsB7/dWA==",
       "path": "npgsql.entityframeworkcore.postgresql/8.0.0-preview.1",
       "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.0-preview.1.nupkg.sha512"
+    },
+    "Pagination.EntityFrameworkCore.Extensions/2.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mYnC33RZTpQq5VJZdP/snPUON7KXseZsDt3mHDPY0einPtuP7tQipS4qso4kxwAvkXrm5KxQBKmbuR5pflPBw==",
+      "path": "pagination.entityframeworkcore.extensions/2.4.3",
+      "hashPath": "pagination.entityframeworkcore.extensions.2.4.3.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

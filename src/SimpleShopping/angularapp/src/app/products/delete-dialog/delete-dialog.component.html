@@ -1,0 +1,14 @@
+<div class="bg-danger">
+
+    <mat-dialog-actions >
+    <h1 mat-dialog-title style="color: white;">Delete Employee</h1>
+    <div mat-dialog-content style="color: white;">
+        Do you want delete employee? 
+        {{data}}
+    </div>
+    <div mat-dialog-actions>
+        <button style="color: white;" mat-button mat-dialog-close>No</button>
+        <button style="color: white;" (click)="OnDelete()" mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+    </div>
+</mat-dialog-actions>
+</div>

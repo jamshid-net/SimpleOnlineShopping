@@ -569,6 +569,18 @@
           }
         }
       },
+      "Pagination.EntityFrameworkCore.Extensions/2.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll": {}
+        }
+      },
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
@@ -1497,6 +1509,19 @@
         "postgresql.png"
       ]
     },
+    "Pagination.EntityFrameworkCore.Extensions/2.4.3": {
+      "sha512": "6mYnC33RZTpQq5VJZdP/snPUON7KXseZsDt3mHDPY0einPtuP7tQipS4qso4kxwAvkXrm5KxQBKmbuR5pflPBw==",
+      "type": "package",
+      "path": "pagination.entityframeworkcore.extensions/2.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll",
+        "pagination.entityframeworkcore.extensions.2.4.3.nupkg.sha512",
+        "pagination.entityframeworkcore.extensions.nuspec"
+      ]
+    },
     "System.CodeDom/4.4.0": {
       "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
       "type": "package",
@@ -1666,6 +1691,7 @@
       "Microsoft.Extensions.Configuration >= 8.0.0-preview.1.23110.8",
       "Microsoft.Extensions.Configuration.Binder >= 8.0.0-preview.1.23110.8",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.0-preview.1",
+      "Pagination.EntityFrameworkCore.Extensions >= 2.4.3",
       "System.IdentityModel.Tokens.Jwt >= 7.0.0-preview4"
     ]
   },
@@ -1752,6 +1778,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[8.0.0-preview.1, )"
+          },
+          "Pagination.EntityFrameworkCore.Extensions": {
+            "target": "Package",
+            "version": "[2.4.3, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

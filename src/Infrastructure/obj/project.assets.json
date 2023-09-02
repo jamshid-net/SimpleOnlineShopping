@@ -490,6 +490,18 @@
           }
         }
       },
+      "Pagination.EntityFrameworkCore.Extensions/2.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll": {}
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/7.0.0-preview4": {
         "type": "package",
         "dependencies": {
@@ -519,6 +531,7 @@
           "Microsoft.Extensions.Configuration": "8.0.0-preview.1.23110.8",
           "Microsoft.Extensions.Configuration.Binder": "8.0.0-preview.1.23110.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0-preview.1",
+          "Pagination.EntityFrameworkCore.Extensions": "2.4.3",
           "System.IdentityModel.Tokens.Jwt": "7.0.0-preview4"
         },
         "compile": {
@@ -1284,6 +1297,19 @@
         "npgsql.entityframeworkcore.postgresql.8.0.0-preview.1.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
+      ]
+    },
+    "Pagination.EntityFrameworkCore.Extensions/2.4.3": {
+      "sha512": "6mYnC33RZTpQq5VJZdP/snPUON7KXseZsDt3mHDPY0einPtuP7tQipS4qso4kxwAvkXrm5KxQBKmbuR5pflPBw==",
+      "type": "package",
+      "path": "pagination.entityframeworkcore.extensions/2.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.1/Pagination.EntityFrameworkCore.Extensions.dll",
+        "pagination.entityframeworkcore.extensions.2.4.3.nupkg.sha512",
+        "pagination.entityframeworkcore.extensions.nuspec"
       ]
     },
     "System.IdentityModel.Tokens.Jwt/7.0.0-preview4": {

@@ -1,7 +1,9 @@
-﻿using Application.UseCases.Products.Commands;
+﻿using Application.Common.HelperExtentions;
+using Application.UseCases.Products.Commands;
 using Application.UseCases.Products.Reponse;
 using AutoMapper;
 using Domain.Entities;
+using Pagination.EntityFrameworkCore.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +18,6 @@ public class ProductMapping:Profile
         CreateMap<CreateProductCommand,Product>().ReverseMap();
        
         CreateMap<ProductResponse,Product>().ReverseMap();
+        CreateMap<Pagination<ProductResponse>, Pagination<Product>>().ReverseMap();
     }
 }

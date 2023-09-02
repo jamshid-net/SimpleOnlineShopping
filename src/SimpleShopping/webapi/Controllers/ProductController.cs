@@ -9,9 +9,13 @@ namespace webapi.Controllers;
 [ApiController]
 public class ProductController : BaseController
 {
+
+    [HttpGet("[action]")]
+    public async Task<IActionResult> GetPaginated(int page, int limit, string orderby = null)
+    {
+        return Ok(await _mediator.Send(new GetProductsPaginationQuery() { Page = page, Limit = limit, OrderByColumn= orderby}));
+    }
     
-
-
     [HttpGet("[action]")]
     public async Task<IActionResult> GetAll()
     {
@@ -43,5 +47,8 @@ public class ProductController : BaseController
         await _mediator.Send(command);
         return NoContent();
     }
+
+
+    
 
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T7BJqW8RiDPRxEWsqeNnsDGFKh7G+iOmRB5nC6s+JWgmpLp4fmq5m+4LJ0+GuWowstPrecbkgrXwCB883TMdbQ==",
+  "dgSpecHash": "g/42BCMNUdnPVtU7YObam3AomfhGc7zz+6BSJMb7aFFiZ91+o4KUTFJNV5B9NPrdchfTHH1jIXvQy1NwH+OYsg==",
   "success": true,
   "projectFilePath": "D:\\SimpleShopping\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\npgsql\\8.0.0-preview.1\\npgsql.8.0.0-preview.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.0-preview.1\\npgsql.entityframeworkcore.postgresql.8.0.0-preview.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\pagination.entityframeworkcore.extensions\\2.4.3\\pagination.entityframeworkcore.extensions.2.4.3.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.0.0-preview4\\system.identitymodel.tokens.jwt.7.0.0-preview4.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.text.encodings.web\\8.0.0-preview.1.23110.8\\system.text.encodings.web.8.0.0-preview.1.23110.8.nupkg.sha512",
