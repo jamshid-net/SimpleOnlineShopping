@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Common\Behaviours\" />
+    <Folder Include="UseCases\Orders\Queries\" />
   </ItemGroup>
 
   <ItemGroup>

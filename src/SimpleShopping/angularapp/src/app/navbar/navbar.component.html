@@ -6,19 +6,27 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item" *ngIf="!userIsAuthorized()">
-            <a class="nav-link" routerLinkActive="customActive" routerLink="/login">Login</a>
-          </li>
-          <li class="nav-item" *ngIf="!userIsAuthorized()">
-            <a class="nav-link" routerLinkActive="customActive" routerLink="/register">Register</a>
-          </li>
-          
+          <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+   
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div *ngIf="userIsAuthorized()" class="dropdown" style="margin-right: 80px;">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+        <a role="button"  *ngIf="!userIsAuthorized()"  routerLink="/login" class="btn btn-outline-light me-2">Login</a>
+        <a role="button"  *ngIf="!userIsAuthorized()"  routerLink="/register" class="btn btn-outline-warning">Register</a>
+       
       </div>
     </div>
   </nav>

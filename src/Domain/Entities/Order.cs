@@ -17,5 +17,5 @@ public partial class Order
 
     public virtual User? User { get; set; }
 
-    public virtual List<Product>? Products { get; set; }
+    public virtual List<Product>? Products { get; set; } = new List<Product>();
 }

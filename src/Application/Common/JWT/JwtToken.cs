@@ -27,7 +27,7 @@ public class JwtToken : IJwtToken
     {
         var hashedPassword = user.Password.GetHashedString();
 
-        var foundUser =await _context.Users
+        var foundUser =await _context.Users.Include(role=> role.Roles)
             .SingleOrDefaultAsync(x=> x.Email == user.Email && x.Password == hashedPassword);
         if(foundUser == null || string.IsNullOrEmpty(foundUser.Email))
         {
@@ -43,7 +43,8 @@ public class JwtToken : IJwtToken
         var claims = new List<Claim>()
         {
             new Claim("Email", email),
-            new Claim("UserId",userId.ToString())
+            new Claim(ClaimTypes.NameIdentifier,userId.ToString()),
+            new Claim("UserId",userId.ToString()),
 
         };
 
@@ -52,6 +53,7 @@ public class JwtToken : IJwtToken
             foreach (var role in roles)
             {
                 claims.Add(new Claim("Roles", role.RoleName));
+                claims.Add(new Claim(ClaimTypes.Role, role.RoleName));
             }
         }
         var jwt = new JwtSecurityToken(

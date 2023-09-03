@@ -35,7 +35,10 @@ public class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, T
 
         string hashedPassowrd = request.Password.GetHashedString();
         var newUser = _mapper.Map<User>(request);
-        
+
+        var defaultRole = _context.Roles.FirstOrDefault(r => r.RoleName == "user");
+        newUser.Roles.Add(defaultRole);
+
         newUser.Password = hashedPassowrd;
         await _context.Users.AddAsync(newUser, cancellationToken);
         if( await _context.SaveChangesAsync(cancellationToken)>0)
